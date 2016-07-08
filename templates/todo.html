@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Go ToDo</title>
+    </head>
+    <body>
+        {{range .}}
+        <pre>#{{.Content}}</pre>
+        {{end}}
+        <form action="/add" method="post">
+            <div>
+                <textarea name="content" row="3" cols="60"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="add Task">
+            </div>
+        </form>
+    </body>
+</html>
